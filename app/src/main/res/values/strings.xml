@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">War Games</string>
+    <string name="war_games">War Games</string>
+    <string name="number_war">Number War</string>
 </resources>
