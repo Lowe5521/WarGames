@@ -8,7 +8,7 @@ import kotterknife.bindView
 
 class MainMenu : AppCompatActivity() {
 
-    val btnNumberWar: Button by bindView<Button>(R.id.number_war_btn)
+    val btnNumberWar: Button by bindView(R.id.number_war_btn)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
