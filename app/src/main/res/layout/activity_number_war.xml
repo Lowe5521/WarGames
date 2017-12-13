@@ -4,15 +4,149 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
     tools:context="com.jonkoester.wargames.NumberWar">
 
     <TextView
+        android:id="@+id/winning_munitions_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/tv_square_background"
+        android:padding="4dp"
+        android:text="@string/winning_munitions"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/battle_winner_tv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/tv_circle_background"
+        android:gravity="center"
+        android:padding="2dp"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/winning_munitions_tv"
+        tools:text="13" />
+
+    <TextView
+        android:id="@+id/my_munitions_tv"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginStart="42dp"
+        android:background="@drawable/tv_square_background"
+        android:gravity="center"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/your_munitions_tv"
+        app:layout_constraintEnd_toStartOf="@+id/attack_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/your_munitions_tv"
+        tools:text="13" />
+
+    <TextView
+        android:id="@+id/your_munitions_tv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="42dp"
+        android:background="@drawable/tv_square_background"
+        android:gravity="center"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/winning_munitions_tv"
+        app:layout_constraintTop_toBottomOf="@+id/battle_winner_tv"
+        tools:text="5" />
+
+    <Button
+        android:id="@+id/attack_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:layout_marginEnd="162dp"
+        android:text="@string/attack"
+        app:layout_constraintBottom_toBottomOf="@+id/my_munitions_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/my_munitions_tv" />
+
+    <TextView
+        android:id="@+id/me_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/me"
+        android:textSize="48sp"
+        app:layout_constraintLeft_toLeftOf="@id/my_munitions_tv"
+        app:layout_constraintRight_toRightOf="@id/my_munitions_tv"
+        app:layout_constraintTop_toBottomOf="@id/my_munitions_tv" />
+
+    <TextView
+        android:id="@+id/you_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/you"
+        android:textSize="48sp"
+        app:layout_constraintLeft_toLeftOf="@id/your_munitions_tv"
+        app:layout_constraintRight_toRightOf="@id/your_munitions_tv"
+        app:layout_constraintTop_toBottomOf="@id/your_munitions_tv" />
+
+    <TextView
+        android:id="@+id/my_remaining_tv"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/tv_square_background"
+        android:text="@string/remaining"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/my_munitions_tv"
+        app:layout_constraintStart_toStartOf="@id/my_munitions_tv"
+        app:layout_constraintTop_toBottomOf="@id/me_tv"
+        tools:layout_editor_absoluteY="345dp" />
+
+    <TextView
+        android:id="@+id/your_remaining_tv"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/tv_square_background"
+        android:text="@string/remaining"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/your_munitions_tv"
+        app:layout_constraintStart_toStartOf="@id/your_munitions_tv"
+        app:layout_constraintTop_toBottomOf="@id/you_tv" />
+
+    <TextView
+        android:id="@+id/my_reinforcements_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/tv_square_background"
+        android:text="@string/reinforcements"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/attack_btn"
+        app:layout_constraintStart_toStartOf="@id/my_munitions_tv"
+        app:layout_constraintTop_toBottomOf="@id/my_remaining_tv" />
+
+    <TextView
+        android:id="@+id/your_reinforcements_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/tv_square_background"
+        android:text="@string/reinforcements"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/your_munitions_tv"
+        app:layout_constraintStart_toEndOf="@id/attack_btn"
+        app:layout_constraintTop_toBottomOf="@id/your_remaining_tv" />
 
 </android.support.constraint.ConstraintLayout>
