@@ -17,7 +17,6 @@
         android:text="@string/winning_munitions"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,17 +31,14 @@
         android:textAlignment="center"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/winning_munitions_tv"
         tools:text="13" />
 
     <TextView
         android:id="@+id/my_munitions_tv"
-        android:layout_width="0dp"
+        android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginStart="42dp"
         android:background="@drawable/tv_square_background"
         android:gravity="center"
         android:textAlignment="center"
@@ -56,7 +52,6 @@
         android:id="@+id/your_munitions_tv"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginEnd="42dp"
         android:background="@drawable/tv_square_background"
         android:gravity="center"
         android:textAlignment="center"
@@ -67,13 +62,12 @@
 
     <Button
         android:id="@+id/attack_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="22dp"
-        android:layout_marginEnd="162dp"
         android:text="@string/attack"
         app:layout_constraintBottom_toBottomOf="@+id/my_munitions_tv"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/your_munitions_tv"
         app:layout_constraintStart_toEndOf="@+id/my_munitions_tv" />
 
     <TextView
